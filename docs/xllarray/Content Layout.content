@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Topics>
+  <Topic id="2FD789-0000-0000-0000-000000000000" visible="True" isExpanded="true" isSelected="true">
+    <Topic id="461F749C-0000-0000-0000-000000000000" visible="True" title="XLL.RANGE function" tocTitle="XLL.RANGE" />
+    <Topic id="744D8BBA-0000-0000-0000-000000000000" visible="True" title="XLL.RANGE.GET function" tocTitle="XLL.RANGE.GET" />
+    <Topic id="617E9062-0000-0000-0000-000000000000" visible="True" title="XLL.RANGE.SET function" tocTitle="XLL.RANGE.SET" />
+    <Topic id="4502D2B9-0000-0000-0000-000000000000" visible="True" title="XLL.RANGE.TAKE function" tocTitle="XLL.RANGE.TAKE" />  
+  </Topic>
+</Topics>
