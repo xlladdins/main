@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="5dcc1a99-7dc7-4557-a3bb-8b0a8bcab27c" Title="xllrandom" Url="html/2FD789-0000-0000-0000-000000000000.htm">
+  <HelpTOCNode Id="8873fb16-1355-4dc1-8c83-adf57ac67259" Title="xllrandom" Url="html/2FD789-0000-0000-0000-000000000000.htm">
     <HelpTOCNode Title="RANDOM.DEFAULT.ENGINE" Url="html/50013A7-0000-0000-0000-000000000000.htm" />
     <HelpTOCNode Title="RANDOM_DISTRIBUTION_BERNOULLI" Url="html/48FBD1A6-0000-0000-0000-000000000000.htm" />
     <HelpTOCNode Title="RANDOM_DISTRIBUTION_BINOMIAL" Url="html/573B8CA5-0000-0000-0000-000000000000.htm" />
