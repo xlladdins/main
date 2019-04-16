@@ -23,6 +23,10 @@ X(MT19937_64, mt19937_64, "Generates a high quality random sequence of integers 
 //X(RANLUX4, ranlux4, "Generates a random sequence using discard block and subtract-with-carry (lagged Fibonacci) algorithm.") \
 //X(RANLUX48, ranlux48, "Generates a random sequence using discard block and subtract-with-carry (lagged Fibonacci) algorithm.") \
 
+#define ENUM_(a,b,c) RANDOM_ENGINE_ ## a,
+enum RandomEngine { RANDOM_ENGINE(ENUM_) };
+#undef ENUM_
+
 #define UNPAREN(...) __VA_ARGS__
 #define RANDOM_DISTRIBUTION(X) \
 X(BERNOULLI, UNPAREN(bernoulli_distribution), bool, UNPAREN(double), UNPAREN(p), "Return true with probability p, false with probability 1 - p") \
@@ -47,5 +51,9 @@ X(WEIBULL, UNPAREN(weibull_distribution<double>), double, UNPAREN(double,double)
 X(TUKEY, UNPAREN(tukey_lambda_distribution<double>), double, UNPAREN(double), UNPAREN(lambda), "Quantile (q^lambda - (1-q)^lambda)/lambda") \
 //X(UNIFORM_INT, UNPAREN(uniform_int_distribution<int>), int, UNPAREN(int,int), UNPAREN(a,b), "Uniform integers on [a,b]") \
 // illegal call of non-static member function
+
+#define ENUM_(a,b,c,d,e,f) RANDOM_DISTRIBUTION_ ## a,
+enum RandomDistribution { RANDOM_DISTRIBUTION(ENUM_) };
+#undef ENUM_
 
 #undef UNPAREN
