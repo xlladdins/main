@@ -88,33 +88,19 @@
   <ItemGroup>
     <None Include="xllrandom.aml" />
     <None Include="xllrandom.aml" />
+    <None Include="RANDOM.BERNOULLI.aml" />
+    <None Include="RANDOM.BINOMIAL.aml" />
+    <None Include="RANDOM.CAUCHY.aml" />
     <None Include="RANDOM.DEFAULT.ENGINE.aml" />
-    <None Include="RANDOM_DISTRIBUTION_BERNOULLI.aml" />
-    <None Include="RANDOM_DISTRIBUTION_BINOMIAL.aml" />
-    <None Include="RANDOM_DISTRIBUTION_CAUCHY.aml" />
-    <None Include="RANDOM_DISTRIBUTION_CHI_SQUARED.aml" />
-    <None Include="RANDOM_DISTRIBUTION_DISCRETE.aml" />
-    <None Include="RANDOM_DISTRIBUTION_EXPONENTIAL.aml" />
-    <None Include="RANDOM_DISTRIBUTION_EXTREME_VALUE.aml" />
-    <None Include="RANDOM_DISTRIBUTION_FISHER_F.aml" />
-    <None Include="RANDOM_DISTRIBUTION_GAMMA.aml" />
-    <None Include="RANDOM_DISTRIBUTION_GEOMETRIC.aml" />
-    <None Include="RANDOM_DISTRIBUTION_LOGNORMAL.aml" />
-    <None Include="RANDOM_DISTRIBUTION_NEGATIVE_BINOMIAL.aml" />
-    <None Include="RANDOM_DISTRIBUTION_NORMAL.aml" />
-    <None Include="RANDOM_DISTRIBUTION_PIECEWISE_CONSTANT.aml" />
-    <None Include="RANDOM_DISTRIBUTION_PIECEWISE_LINEAR.aml" />
-    <None Include="RANDOM_DISTRIBUTION_POISSON.aml" />
-    <None Include="RANDOM_DISTRIBUTION_STUDENT_T.aml" />
-    <None Include="RANDOM_DISTRIBUTION_TUKEY.aml" />
-    <None Include="RANDOM_DISTRIBUTION_UNIFORM_REAL.aml" />
-    <None Include="RANDOM_DISTRIBUTION_WEIBULL.aml" />
     <None Include="RANDOM_ENGINE_DEFAULT.aml" />
     <None Include="RANDOM_ENGINE_KNUTH_B.aml" />
     <None Include="RANDOM_ENGINE_MINSTD_RAND.aml" />
     <None Include="RANDOM_ENGINE_MINSTD_RAND0.aml" />
     <None Include="RANDOM_ENGINE_MT19937.aml" />
     <None Include="RANDOM_ENGINE_MT19937_64.aml" />
+    <None Include="VARIATE.BOOL.aml" />
+    <None Include="VARIATE.INT.aml" />
+    <None Include="VARIATE.NUM.aml" />
   </ItemGroup>
   <!---
   <ItemGroup>
