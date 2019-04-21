@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EE33CF11-0A69-4D2B-ACFA-439478B75555}"
 	ProjectSection(SolutionItems) = preProject
 		index.html = index.html
+		xlladdins.css = xlladdins.css
 	EndProjectSection
 EndProject
 Global
