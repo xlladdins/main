@@ -10,8 +10,6 @@ using namespace xll;
 //#define XLL_ENUM_(a,b,c,d,e,f) XLL_ENUM_DOC(RANDOM_DISTRIBUTION_##a, RANDOM_DISTRIBUTION_##a, CATEGORY, f L". Parameters: " HASH_(UNPAREN(e)), HASH_(f))
 //RANDOM_DISTRIBUTION(XLL_ENUM_)
 
-std::default_random_engine dre;
-
 AddIn xai_variate_bool(
     Function(XLL_BOOL, L"?xll_variate_bool", PREFIX L"VARIATE.BOOL")
     .Arg(XLL_HANDLE, L"h", L"is a handle to a random distribution returning boolean values.")
@@ -85,6 +83,20 @@ double WINAPI xll_variate_num(HANDLEX h)
     return d;
 }
 
+std::default_random_engine dre;
+std::knuth_b knuth_b_eng;
+
+template<class D, class T = D::result_type>
+inline std::function<T()> distribution(const D& dist, WORD eng)
+{
+    switch (eng) {
+    case RANDOM_ENGINE_KNUTH_B:
+        return std::function{[dist]() -> T { return dist(knuth_b_eng); }};
+    default:
+        return std::function{[dist]() -> T { return dist(dre); }};
+    }
+}
+
 //
 // Boolean Variates
 //
@@ -105,14 +117,11 @@ HANDLEX WINAPI xll_random_bernoulli(WORD engine, double p)
 
     try {
         ensure (0 <= p && p <= 1);
-        std::bernoulli_distribution d(p);
 
-        switch (engine) {
-        case RANDOM_ENGINE_DEFAULT:
-        default:
-            handle<std::function<bool()>> h_(new std::function{[d]() -> bool { return d(dre); }});
-            h = h_.get();
-        }
+        std::bernoulli_distribution d(p);
+        handle<std::function<bool()>> h_(new std::function{distribution(d, engine)});
+
+        h = h_.get();
     }
     catch (const std::exception& ex) {
         XLL_ERROR(ex.what());
@@ -143,14 +152,11 @@ HANDLEX WINAPI xll_random_binomial(WORD engine, LONG t, double p)
     try {
         ensure (t >= 0);
         ensure (0 <= p && p <= 1);
+        
         std::binomial_distribution d(t, p);
-
-        switch (engine) {
-        case RANDOM_ENGINE_DEFAULT:
-        default:
-            handle<std::function<LONG()>> h_(new std::function{[d]() -> LONG { return d(dre); }});
-            h = h_.get();
-        }
+        handle<std::function<LONG()>> h_(new std::function{distribution(d, engine)});
+        
+        h = h_.get();
     }
     catch (const std::exception& ex) {
         XLL_ERROR(ex.what());
@@ -185,14 +191,11 @@ HANDLEX WINAPI xll_random_cauchy(WORD engine, double a, double b)
         ensure(b >= 0);
         if (b == 0)
             b = 1;
+        
         std::cauchy_distribution d(a, b);
-
-        switch (engine) {
-        case RANDOM_ENGINE_DEFAULT:
-        default:
-            handle<std::function<double()>> h_(new std::function{[d]() -> double { return d(dre); }});
-            h = h_.get();
-        }
+        handle<std::function<double()>> h_(new std::function{distribution(d, engine)});
+        
+        h = h_.get();
     }
     catch (const std::exception& ex) {
         XLL_ERROR(ex.what());
