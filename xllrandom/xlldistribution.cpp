@@ -1,4 +1,5 @@
 // xlldistribution.cpp - random distributions
+#include "../xll12/xll/shfb/entities.h"
 #include "xllrandom.h"
 
 using namespace xll;
@@ -89,7 +90,7 @@ double WINAPI xll_variate_num(HANDLEX h)
 //
 
 AddIn xai_random_bernoulli(
-    Function(XLL_HANDLE, L"?xll_random_bernoulli", PREFIX L"BERNOULLI")
+    Function(XLL_HANDLE, L"?xll_random_bernoulli", PREFIX L"DISTRIBUTION.BERNOULLI")
     .Arg(XLL_WORD, L"engine", L"specifies what engine to use from the RANDOM_ENGINE_* enumeration.")
     .Arg(XLL_DOUBLE, L"p", L"is the probability of returning a TRUE variate.")
     .Uncalced()
@@ -125,7 +126,7 @@ HANDLEX WINAPI xll_random_bernoulli(WORD engine, double p)
 //
 
 AddIn xai_random_binomial(
-    Function(XLL_HANDLE, L"?xll_random_binomial", PREFIX L"BINOMIAL")
+    Function(XLL_HANDLE, L"?xll_random_binomial", PREFIX L"DISTRIBUTION.BINOMIAL")
     .Arg(XLL_WORD, L"engine", L"specifies what engine to use from the RANDOM_ENGINE_* enumeration.")
     .Arg(XLL_LONG, L"t", L"is the number of binomial trials.")
     .Arg(XLL_DOUBLE, L"p", L"is the probability of returning a TRUE variate.")
@@ -163,17 +164,17 @@ HANDLEX WINAPI xll_random_binomial(WORD engine, LONG t, double p)
 //
 
 AddIn xai_random_cauchy(
-    Function(XLL_HANDLE, L"?xll_random_cauchy", PREFIX L"CAUCHY")
+    Function(XLL_HANDLE, L"?xll_random_cauchy", PREFIX L"DISTRIBUTION.CAUCHY")
     .Arg(XLL_WORD, L"engine", L"specifies what engine to use from the RANDOM_ENGINE_* enumeration.")
     .Arg(XLL_DOUBLE, L"a", L"is the location parameter.")
     .Arg(XLL_DOUBLE, L"b", L"is the scale parameter.")
     .Uncalced()
     .Category(CATEGORY)
     .FunctionHelp(L"Create a handle to a random number generator called by RANDOM.BOOL")
-    .Documentation(LR"xyz(
-The Cauchy density function is 
-f(x;&#x3BC;,&#x3B3;) = 1/&#x3C0;&#x3B3;[1 + ((x - &#x3BC;)/&#x3B3;)<superscript>2</superscript>]
-)xyz")
+    .Documentation(
+L"The Cauchy density function is " 
+L"f(x; " mu_ L", " gamma_ L") = 1/" mu_ gamma_ L"[1 + ((x - " mu_ L")/" gamma_ L")" sup2_ L"]"
+)
 );
 HANDLEX WINAPI xll_random_cauchy(WORD engine, double a, double b)
 {
