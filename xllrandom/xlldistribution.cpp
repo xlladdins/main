@@ -3,8 +3,8 @@
 
 using namespace xll;
 
-#define HASH_(x) L#x
-#define UNPAREN(...) __VA_ARGS__
+//#define HASH_(x) L#x
+//#define UNPAREN(...) __VA_ARGS__
 
 //#define XLL_ENUM_(a,b,c,d,e,f) XLL_ENUM_DOC(RANDOM_DISTRIBUTION_##a, RANDOM_DISTRIBUTION_##a, CATEGORY, f L". Parameters: " HASH_(UNPAREN(e)), HASH_(f))
 //RANDOM_DISTRIBUTION(XLL_ENUM_)
@@ -12,7 +12,7 @@ using namespace xll;
 std::default_random_engine dre;
 
 AddIn xai_variate_bool(
-    Function(XLL_BOOL, L"?xll_variate_bool", L"VARIATE.BOOL")
+    Function(XLL_BOOL, L"?xll_variate_bool", PREFIX L"VARIATE.BOOL")
     .Arg(XLL_HANDLE, L"h", L"is a handle to a random distribution returning boolean values.")
     .Volatile()
     .Category(CATEGORY)
@@ -36,7 +36,7 @@ BOOL WINAPI xll_variate_bool(HANDLEX h)
     return b;
 }
 AddIn xai_variate_int(
-    Function(XLL_LONG, L"?xll_variate_int", L"VARIATE.INT")
+    Function(XLL_LONG, L"?xll_variate_int", PREFIX L"VARIATE.INT")
     .Arg(XLL_HANDLE, L"h", L"is a handle to a random distribution returning integer values.")
     .Volatile()
     .Category(CATEGORY)
@@ -60,7 +60,7 @@ LONG WINAPI xll_variate_int(HANDLEX h)
     return l;
 }
 AddIn xai_variate_num(
-    Function(XLL_DOUBLE, L"?xll_variate_num", L"VARIATE.NUM")
+    Function(XLL_DOUBLE, L"?xll_variate_num", PREFIX L"VARIATE.NUM")
     .Arg(XLL_HANDLE, L"h", L"is a handle to a random distribution returning floating point values.")
     .Volatile()
     .Category(CATEGORY)
@@ -89,7 +89,7 @@ double WINAPI xll_variate_num(HANDLEX h)
 //
 
 AddIn xai_random_bernoulli(
-    Function(XLL_HANDLE, L"?xll_random_bernoulli", L"RANDOM.BERNOULLI")
+    Function(XLL_HANDLE, L"?xll_random_bernoulli", PREFIX L"BERNOULLI")
     .Arg(XLL_WORD, L"engine", L"specifies what engine to use from the RANDOM_ENGINE_* enumeration.")
     .Arg(XLL_DOUBLE, L"p", L"is the probability of returning a TRUE variate.")
     .Uncalced()
@@ -125,7 +125,7 @@ HANDLEX WINAPI xll_random_bernoulli(WORD engine, double p)
 //
 
 AddIn xai_random_binomial(
-    Function(XLL_HANDLE, L"?xll_random_binomial", L"RANDOM.BINOMIAL")
+    Function(XLL_HANDLE, L"?xll_random_binomial", PREFIX L"BINOMIAL")
     .Arg(XLL_WORD, L"engine", L"specifies what engine to use from the RANDOM_ENGINE_* enumeration.")
     .Arg(XLL_LONG, L"t", L"is the number of binomial trials.")
     .Arg(XLL_DOUBLE, L"p", L"is the probability of returning a TRUE variate.")
@@ -163,7 +163,7 @@ HANDLEX WINAPI xll_random_binomial(WORD engine, LONG t, double p)
 //
 
 AddIn xai_random_cauchy(
-    Function(XLL_HANDLE, L"?xll_random_cauchy", L"RANDOM.CAUCHY")
+    Function(XLL_HANDLE, L"?xll_random_cauchy", PREFIX L"CAUCHY")
     .Arg(XLL_WORD, L"engine", L"specifies what engine to use from the RANDOM_ENGINE_* enumeration.")
     .Arg(XLL_DOUBLE, L"a", L"is the location parameter.")
     .Arg(XLL_DOUBLE, L"b", L"is the scale parameter.")
