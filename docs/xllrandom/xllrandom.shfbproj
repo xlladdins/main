@@ -88,19 +88,19 @@
   <ItemGroup>
     <None Include="xllrandom.aml" />
     <None Include="xllrandom.aml" />
-    <None Include="RANDOM.BERNOULLI.aml" />
-    <None Include="RANDOM.BINOMIAL.aml" />
-    <None Include="RANDOM.CAUCHY.aml" />
-    <None Include="RANDOM.DEFAULT.ENGINE.aml" />
+    <None Include="RANDOM.DISTRIBUTION.BERNOULLI.aml" />
+    <None Include="RANDOM.DISTRIBUTION.BINOMIAL.aml" />
+    <None Include="RANDOM.DISTRIBUTION.CAUCHY.aml" />
+    <None Include="RANDOM.ENGINE.aml" />
+    <None Include="RANDOM.VARIATE.BOOL.aml" />
+    <None Include="RANDOM.VARIATE.INT.aml" />
+    <None Include="RANDOM.VARIATE.NUM.aml" />
     <None Include="RANDOM_ENGINE_DEFAULT.aml" />
     <None Include="RANDOM_ENGINE_KNUTH_B.aml" />
     <None Include="RANDOM_ENGINE_MINSTD_RAND.aml" />
     <None Include="RANDOM_ENGINE_MINSTD_RAND0.aml" />
     <None Include="RANDOM_ENGINE_MT19937.aml" />
     <None Include="RANDOM_ENGINE_MT19937_64.aml" />
-    <None Include="VARIATE.BOOL.aml" />
-    <None Include="VARIATE.INT.aml" />
-    <None Include="VARIATE.NUM.aml" />
   </ItemGroup>
   <!---
   <ItemGroup>

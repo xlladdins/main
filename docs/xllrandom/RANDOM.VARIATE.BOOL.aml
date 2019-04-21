@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<topic id="4502D2B9-0000-0000-0000-000000000000" revisionNumber="1">
+<topic id="D2ABF7E-0000-0000-0000-000000000000" revisionNumber="1">
   <developerConceptualDocument
     xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -17,7 +17,7 @@
            zero (0) to limit it to top-level sections only.  -->
       <!-- <autoOutline /> -->
 
-      <para>Return a new range or modify the range if a handle is given.</para>
+      <para>Generate a random boolean variate.</para>
     </introduction>
 
     <!-- Add one or more top-level section elements.  These are collapsible.
@@ -26,11 +26,7 @@
     <section address="Description">
       <title>Description</title>
       <content>
-        <para>
-If the absolute value of <codeInline>n</codeInline> is greater than or equal to the number of rows of the
-range the operation returns the entire range. If <codeInline>n</codeInline> is 0 the result is
-<codeInline>xltypNil</codeInline>: the Excel notion of an empty range.
-</para>
+        <para>x</para>
       </content>
     </section>
     <section address="Syntax">
@@ -38,11 +34,9 @@ range the operation returns the entire range. If <codeInline>n</codeInline> is 0
       <content>
         <!-- Uncomment this to create a sub-section outline
         <autoOutline /> -->
-        <para>XLL.RANGE.TAKE(n, range)</para>
+        <para>RANDOM.VARIATE.BOOL(h)</para>
         <list class="bullet">
-    <listItem><para>      <legacyBold>n</legacyBold> is the number of elements to take from the front rows (n positive) or back rows (n negative) of a range.
-    </para></listItem>
-    <listItem><para>      <legacyBold>range</legacyBold> is a range or a handle to a range.
+    <listItem><para>      <legacyBold>h</legacyBold> is a handle to a random distribution returning boolean values.
     </para></listItem>
         </list>
       </content>
