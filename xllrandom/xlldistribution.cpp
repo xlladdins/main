@@ -108,7 +108,9 @@ AddIn xai_random_bernoulli(
     .Uncalced()
     .Category(CATEGORY)
     .FunctionHelp(L"Create a handle to a random number generator called by RANDOM.BOOL")
-    .Documentation(L"x")
+    .Documentation(
+        L"Generate TRUE with probability " I_(L"p") L" and FALSE with probability 1 - " I_(L"p") L"."
+    )
 );
 HANDLEX WINAPI xll_random_bernoulli(WORD engine, double p)
 {
@@ -137,23 +139,27 @@ HANDLEX WINAPI xll_random_bernoulli(WORD engine, double p)
 AddIn xai_random_binomial(
     Function(XLL_HANDLE, L"?xll_random_binomial", PREFIX L"DISTRIBUTION.BINOMIAL")
     .Arg(XLL_WORD, L"engine", L"specifies what engine to use from the RANDOM_ENGINE_* enumeration.")
-    .Arg(XLL_LONG, L"t", L"is the number of binomial trials.")
+    .Arg(XLL_LONG, L"n", L"is the number of binomial trials.")
     .Arg(XLL_DOUBLE, L"p", L"is the probability of returning a TRUE variate.")
     .Uncalced()
     .Category(CATEGORY)
     .FunctionHelp(L"Create a handle to a random number generator called by RANDOM.BOOL")
-    .Documentation(L"x")
+    .Documentation(
+        L"Generate integers " I_(L"k") L", 0 " le_ L" " I_(L"k") L" " le_ L" " I_(L"n")
+        L", with probabilty C(n,k) p<superscript>k</superscript>(1 - p)<superscript>n-k</superscript>"
+        L" where C(n,k) = n!/k!(n - k)! is the number of combinations of k items chosen from n items."
+    )
 );
-HANDLEX WINAPI xll_random_binomial(WORD engine, LONG t, double p)
+HANDLEX WINAPI xll_random_binomial(WORD engine, LONG n, double p)
 {
 #pragma XLLEXPORT
     handlex h;
 
     try {
-        ensure (t >= 0);
+        ensure (n >= 0);
         ensure (0 <= p && p <= 1);
         
-        std::binomial_distribution d(t, p);
+        std::binomial_distribution d(n, p);
         handle<std::function<LONG()>> h_(new std::function{distribution(d, engine)});
         
         h = h_.get();
@@ -179,7 +185,7 @@ AddIn xai_random_cauchy(
     .FunctionHelp(L"Create a handle to a random number generator called by RANDOM.BOOL")
     .Documentation(
 L"The Cauchy density function is " 
-L"f(x; " mu_ L", " gamma_ L") = 1/" mu_ gamma_ L"[1 + ((x - " mu_ L")/" gamma_ L")" sup2_ L"]"
+L"f(x; a, b) = 1/ab[1 + ((x - a)/b)" sup2_ L"]"
 )
 );
 HANDLEX WINAPI xll_random_cauchy(WORD engine, double a, double b)
