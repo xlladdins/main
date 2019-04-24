@@ -3,3 +3,21 @@
     font-size: 15px;
     color: #000;
 }
+table {
+    background-color: #FCFCFC;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom-color: black;
+    border: 1px solid black;
+}
+
+td:first-child {
+    text-align: right;
+}
+
+tr:nth-child(even) {
+    background-color: #F0F0FF;
+}
+
