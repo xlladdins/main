@@ -109,7 +109,7 @@ AddIn xai_random_bernoulli(
     .Category(CATEGORY)
     .FunctionHelp(L"Create a handle to a random number generator called by RANDOM.BOOL")
     .Documentation(
-        L"Generate TRUE with probability " I_(L"p") L" and FALSE with probability 1 - " I_(L"p") L"."
+#include "random_bernoulli.html"
     )
 );
 HANDLEX WINAPI xll_random_bernoulli(WORD engine, double p)
