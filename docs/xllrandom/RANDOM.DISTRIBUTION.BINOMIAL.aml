@@ -26,7 +26,7 @@
     <section address="Description">
       <title>Description</title>
       <content>
-        <para>x</para>
+        <para>Generate integers <legacyItalic>k</legacyItalic>, 0 &#8804; <legacyItalic>k</legacyItalic> &#8804; <legacyItalic>n</legacyItalic>, with probabilty C(n,k) p<superscript>k</superscript>(1 - p)<superscript>n-k</superscript> where C(n,k) = n!/k!(n - k)! is the number of combinations of k items chosen from n items.</para>
       </content>
     </section>
     <section address="Syntax">
@@ -34,11 +34,11 @@
       <content>
         <!-- Uncomment this to create a sub-section outline
         <autoOutline /> -->
-        <para>RANDOM.DISTRIBUTION.BINOMIAL(engine, t, p)</para>
+        <para>RANDOM.DISTRIBUTION.BINOMIAL(engine, n, p)</para>
         <list class="bullet">
     <listItem><para>      <legacyBold>engine</legacyBold> specifies what engine to use from the RANDOM_ENGINE_* enumeration.
     </para></listItem>
-    <listItem><para>      <legacyBold>t</legacyBold> is the number of binomial trials.
+    <listItem><para>      <legacyBold>n</legacyBold> is the number of binomial trials.
     </para></listItem>
     <listItem><para>      <legacyBold>p</legacyBold> is the probability of returning a TRUE variate.
     </para></listItem>

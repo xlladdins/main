@@ -26,7 +26,7 @@
     <section address="Description">
       <title>Description</title>
       <content>
-        <para>x</para>
+        <para>Generate TRUE with probability <legacyItalic>p</legacyItalic> and FALSE with probability 1 - <legacyItalic>p</legacyItalic>.</para>
       </content>
     </section>
     <section address="Syntax">

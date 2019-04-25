@@ -26,7 +26,7 @@
     <section address="Description">
       <title>Description</title>
       <content>
-        <para>The Cauchy density function is f(x; &#956;, &#947;) = 1/&#956;&#947;[1 + ((x - &#956;)/&#947;)&#178;]</para>
+        <para>The Cauchy density function is f(x; a, b) = 1/ab[1 + ((x - a)/b)&#178;]</para>
       </content>
     </section>
     <section address="Syntax">
