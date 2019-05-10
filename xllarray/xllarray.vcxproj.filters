@@ -26,5 +26,11 @@
     <ClCompile Include="xlltake.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="xlldrop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xllproduct.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

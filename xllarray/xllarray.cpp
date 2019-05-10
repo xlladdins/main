@@ -5,7 +5,10 @@ using namespace xll;
 #ifdef _DEBUG
 AddIn doc_xllarray(
     Documentation(LR"xyz(
-Array (of floating point numbers) or Range of cells functions.
+A <newTerm>range</newTerm> is a 2-dimensional array of cells.
+This add-in provides functions that operate on ranges. It
+is also possible to create in-memory ranges.
+
 )xyz")
 );
 #endif

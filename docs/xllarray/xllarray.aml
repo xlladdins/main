@@ -13,7 +13,10 @@
            zero (0) to limit it to top-level sections only.  -->
       <!-- <autoOutline /> -->
       <para>
-Array (of floating point numbers) or Range of cells functions.
+A <newTerm>range</newTerm> is a 2-dimensional array of cells.
+This add-in provides functions that operate on ranges. It
+is also possible to create in-memory ranges.
+
 </para>
     </introduction>
     <!-- Add one or more top-level section elements.  These are collapsible.
