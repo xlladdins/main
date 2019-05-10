@@ -11,8 +11,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xllrandom", "xllrandom\xllr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49CBC35A-31C6-49B6-AF54-D4347169B225}"
 	ProjectSection(SolutionItems) = preProject
+		NOTES.md = NOTES.md
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "xllarraySetup", "xllarraySetup\xllarraySetup.vdproj", "{58CF692B-F65F-453B-A25C-A0AFF935DBB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +49,10 @@ Global
 		{7FD48313-BD64-462B-BBE9-7B010FA00B66}.Release|x64.Build.0 = Release|x64
 		{7FD48313-BD64-462B-BBE9-7B010FA00B66}.Release|x86.ActiveCfg = Release|Win32
 		{7FD48313-BD64-462B-BBE9-7B010FA00B66}.Release|x86.Build.0 = Release|Win32
+		{58CF692B-F65F-453B-A25C-A0AFF935DBB4}.Debug|x64.ActiveCfg = Debug
+		{58CF692B-F65F-453B-A25C-A0AFF935DBB4}.Debug|x86.ActiveCfg = Debug
+		{58CF692B-F65F-453B-A25C-A0AFF935DBB4}.Release|x64.ActiveCfg = Release
+		{58CF692B-F65F-453B-A25C-A0AFF935DBB4}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,6 +3,7 @@
 
 using namespace xll;
 
+#if 0
 AddIn xai_range_product(
     Function(XLL_LPOPER, L"?xll_range_product", PREFIX L"RANGE.PRODUCT")
     .Arg(XLL_LPOPER, L"range1", L"is a range.")
@@ -58,3 +59,4 @@ test test_range_product([] {
 });
 
 #endif // _DEBUG
+#endif // 0
